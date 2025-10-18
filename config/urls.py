@@ -26,4 +26,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('inicio.urls')), #Enviar la raíz del sitio a la app 'inicio'
+    path('',include('paginas.urls')), #Enrutamos a la app
+    
 ]

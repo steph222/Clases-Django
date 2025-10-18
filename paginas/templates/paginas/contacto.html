@@ -1,0 +1,26 @@
+{% extends "paginas/base.html" %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+
+    <h2>{{ titulo }}</h2>
+
+    <p>Dirección: {{ direccion }}</p>
+    <p>Teléfono: {{ telefono }}</p>
+    <p>Correo electrónico: <a href="mailto:{{ email }}">{{ email }}</a></p>
+
+    <h3>Formulario de contacto</h3>
+    <form>
+        <label for="">Nombre:</label>
+        <br>
+        <input type="text" name="nombre">
+        <br><br>
+        <label for="">Mensaje: </label>
+        <br>
+        <textarea name="mensaje" rows="4"></textarea>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+{% endblock %}

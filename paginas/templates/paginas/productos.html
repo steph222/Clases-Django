@@ -1,0 +1,23 @@
+{% extends "paginas/base.html" %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <h2>{{ titulo }}</h2>
+
+    <ul>
+        {% for p in productos %}
+            <li>
+                <strong>{{ p.nombre }}</strong> - {{ p.precio }} colones
+                {% if p.disponible %}
+                    <span style="color: green;">(Disponible)</span>
+                {% else %}
+                    <span style="color: red;">(Agotado)</span>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>No hay productos disponibles</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
