@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'inicio', #Registro de la app
     'paginas',
+    'catalogo', #Registramos la nueva app
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3', #SQLite ya esta por defecto por lo que no hay que modificar
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
