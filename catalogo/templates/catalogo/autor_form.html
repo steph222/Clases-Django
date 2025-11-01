@@ -1,0 +1,16 @@
+{% extends 'catalogo/base.html' %}
+{% block title %} Nuevo Autor {% endblock %}
+{% block content %}
+<h1 class="h4 mb-3">Nuevo Autor</h1>
+
+<form method="post" class="bg-white p-3 rounded border">
+    {% csrf_token %}
+    <!-- Este token se usa para proteger tu aplicación contra ataques CSRF(Cross-Site Request Forgery)
+      -->
+    {{ form.as_p }}<!--Muestra todos lo campos del form siempre envueltos en p-->
+
+    <button class="btn btn-success">Guardar</button>
+    <a class="btn btn-outline-secondary" href="{% url 'autor_list' %}">Cancelar</a>
+</form>
+
+{% endblock %}
